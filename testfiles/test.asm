@@ -1,0 +1,10 @@
+LIL $0, #7
+LIL $1, #15
+ROR $3, $1
+ROL $4, $1
+SHR $5, $1
+SHL $6, $1
+NOP 
+NOP
+NOP
+NOP
