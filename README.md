@@ -65,7 +65,7 @@ Flags are updated in the 3 cases shown below in Figure H. Each case requires cov
 
 ![https://i.imgur.com/6Xa0LiB.png](https://i.imgur.com/6Xa0LiB.png)
 
-The flags are stored in the Flags register. Storing of the flags occurs during P2 and when a specific instruction requires them to be updated (top left-side input is the enable, bottom `new flags` is the updated flags that will be written). I,Z,N,O,C,E are the outputs of the flags register that are constantly being read from the Flags register. `A_flag` is always a 1. `R_` represents the address of the flags register that gets checked during the BR operation to see if the program should jump. If the flag is on, then `isFbitset` will be enabled, telling the program to add `VAL` to the current PC value. Otherwise, the PC is incremented normally.
+The flags are stored in the Flags register. Storing of the flags occurs during P2 and when a specific instruction requires them to be updated (top left-side input is the enable, bottom `new flags` is the updated flags that will be written). I, Z, N, O, C, E are the outputs of the flags register that are constantly being read from the Flags register. `A_flag` is always a 1. `R_` represents the address of the flags register that gets checked during the BR operation to see if the program should jump. If the flag is on, then `isFbitset` will be enabled, telling the program to add `VAL` to the current PC value. Otherwise, the PC is incremented normally.
 
 ****FIGURE I****
 
