@@ -3,7 +3,9 @@ I implemented a 15-bit two cycle CPU. Most of the CPU logic is found in the CPU1
 
 ## Program Counter and Instruction Buffer
  
- ****FIGURE A****![https://i.imgur.com/Gs5MFXK.png](https://i.imgur.com/Gs5MFXK.png)
+ ****FIGURE A****
+
+ ![https://i.imgur.com/Gs5MFXK.png](https://i.imgur.com/Gs5MFXK.png)
 
 The CPU clock ticks between a 0 and a 1, indicating the phase - either phase 1 or phase 2. When the bottom input of the PC is 1 and the top input is 0, then the PC gets incremented by one. When the top input of the PC is 1 and the bottom input is 0, then `New_PC` gets loaded into the PC. This only occurs during a `BR`, `JSR` or `JMP` instruction.  `New_PC` gets updated with the correct values each time a BR, JMP, or JSR instruction is processed (See Figure A2).
 
