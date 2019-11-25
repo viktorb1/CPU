@@ -28,7 +28,7 @@ Once the PC is updated, the PC is usually sent to `ADDR` which represents the ad
 
 ![https://i.imgur.com/0YCvgqY.png](https://i.imgur.com/0YCvgqY.png)
 
-The register file has 8 15-bit quick-access memory locations that instructions can read from or write to. During the processing of an instruction, it is possible to write to one of those registers, or read from two registers. `WRITE` is the value that is getting written. This only occurs with the instructions specified in `WRITE_EN1-5`. `R_` and `READB` represent addresses that can be read from. The values also also controlled by their respective enables - `READB_EN1` or `READA_EN Logic`. A and B are the values that were read from the register files from `READA` and `READB` respectively. Reading takes place during `P1` and writing takes place during `P2`
+The register file has 8 15-bit quick-access memory locations that instructions can read from or write to. During the processing of an instruction, it is possible to write to one of those registers, or read from two registers. `WRITE` is the value that is getting written. This only occurs with the instructions specified in `WRITE_EN1-5`. `R_` and `READB` represent register addresses that can be read from. The values also also controlled by their respective enables - `READB_EN1` or `READA_EN Logic`. A and B are the values that were read from the register files from `READA` and `READB` respectively. Reading takes place during `P1` and writing takes place during `P2`
 
  `B` is broken down further into `RH` and `RL` because sometimes you only write the lower 8 bits or the upper 8 bits so you need a way to access the rest of the bits that are not being overwritten to write the newly updated bits.
 
@@ -54,6 +54,7 @@ Once the values are read from the register file, they can be passed along to the
 ****FIGURE G****
 
 ![https://i.imgur.com/Ph2iuPP.png](https://i.imgur.com/Ph2iuPP.png)
+
 ALU adds `A_` and `B_` together, with `S` containing the result. C is the carry bit that is coming as input from the flags register. `Cout, Nout, Oout, Zout` are the newly generated flags that will be stored in the Flags register.
 
 ## Flags Register
